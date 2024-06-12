@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/*----- HEADER -----*/
+
+header .container {
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #012861;
+    padding: 15px 0;
+    margin-bottom: 60px;
+}
+
+header a {
+    color: #ffffff93;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul li {
+    padding: 0 10px;
+}
+
+.menu ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/*----- END HEADER -----*/
+
+/*----- PRIMEIRA DOBRA -----*/
+
+.primeira-dobra .container .flex {
+    gap: 40px;
+}
+
+.primeira-dobra-img {
+    max-width: 40%;
+}
+
+.primeira-dobra-img img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.primeira-dobra-txt {
+    max-width: 60%;
+}
+
+.primeira-dobra-txt h2 {
+    color: #012861;
+    font-size: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #012861;
+}
+
+.primeira-dobra-txt p {
+    margin-top: 32px;
+    line-height: 26px;
+}
+
+/*----- CATALOGO -----*/
+
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, 21.25%);
+    column-gap: 5%;
+}
+
+.catalogo h2 {
+    color: #012861;
+    font-size: 32px;
+    margin-top: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #012861;
+}
+
+article {
+    margin: 20px 0 40px 0;
+}
+
+article img {
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+
+article img:hover {
+    transform: scale(1.1);
+    border: 0.2px solid rgba(126, 126, 126, 0.219);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+}
+
+.shoes h3 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+p.preco-anterior {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.699);
+    padding-bottom: 5px;
+}
+
+p.preco {
+    font-size: 24px;
+    font-weight: 800;
+    color: #e01010;
+    padding-bottom: 5px;
+}
+
+p.parcelas {
+    font-size: 12px;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.shoes h4 {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.shoes .numero {
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+.shoes .numero h5 {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.shoes .numero h5:hover {
+    border: 1px solid #e01010;
+}
+
+.shoes .numero h5:active {
+    color: #fff;
+    background-color: #e01010;
+}
+
+.shoes a button {
+    margin-bottom: 5px;
+}
+
+.shoes a button.comprar {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e01010;
+    cursor: pointer;
+}
+
+.shoes a button.comprar:hover {
+    background-color: #dd4949;
+}
+
+.shoes a button.carrinho {
+    color: #e01010;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e01010;
+    border-radius: 3px;
+    background-color: #e0101000;
+    cursor: pointer;
+}
+
+.shoes a button.carrinho:hover {
+    color: #dd4949;
+}
+
+.shoes img {
+    max-width: 100%;
+}
+
+/*----- END MAIN - CONTEÚDOS -----*/
+
+/*----- RESPONSIVO -----*/
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+    header .container {
+        display: flex;
+        padding: 10px 50px 10px 50px;
+    } 
+
+    header .container li {
+        padding-right: 10px;
+        font-size: 20px;
+        color: #fff;
+    } 
+
+    .flex, .grid {
+        display: block;
+    }
+
+    .primeira-dobra .container .flex,
+    .conteudo {
+        display: block;
+    }
+
+    .primeira-dobra-img,
+    .primeira-dobra-txt {
+        max-width: 100%;
+        padding: 10px 50px 10px 50px;
+    }
+
+    .primeira-dobra-txt h2 {
+        font-size: 32px;
+    }
+
+    .primeira-dobra-txt p {
+        font-size: 20px;
+    }
+
+    .catalogo h2 {
+        padding: 10px 50px 25px 50px;
+    }
+
+    .catalogo .conteudo {
+        padding: 10px 50px 10px 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    .shoes .numero {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        max-width: 10%;
+    }
+}
+
+/*640px*/
+
+@media only screen and (max-width: 640px) {
+    header .container {
+        display: flex;
+        padding: 10px 25px 10px 25px;
+        justify-content: space-between;
+        gap: 50px;
+} 
+
+    header .container li {
+        font-size: 16px;
+        color: #fff;
+    } 
+    
+    .container,
+    .primeira-dobra .container .flex,
+    .conteudo {
+        display: block;
+        padding: 0px 15px 0px 15px;
+    }
+
+    .primeira-dobra-img,
+    .primeira-dobra-txt,
+    .catalogo h2,
+    article {
+        max-width: 100%;
+    }
+
+    .primeira-dobra-img {
+        padding-bottom: 15px;
+    }
+
+    .catalogo h2 {
+        padding: 0px 15px 15px 15px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    article img {
+        margin-bottom: 15px;
+    }
+}
